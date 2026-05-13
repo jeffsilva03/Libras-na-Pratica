@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conteúdos | Libras na Prática</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.441.0/font/lucide.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/principal.js" defer></script>
+</head>
+<body class="pagina-conteudos">
+    <header class="topo">
+        <nav class="navegacao" aria-label="Navegação principal">
+            <a class="marca" href="index.html"><img src="../static/img/logo.png" alt=""><span>Libras na Prática</span></a>
+            <button class="botao-menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+            <div class="menu" id="menu-principal">
+                <div class="links-menu">
+                    <a href="index.html">Início</a>
+                    <a href="index.html#curso">Curso</a>
+                    <a href="index.html#dados">Dados</a>
+                    <a href="index.html#educacao">Educação</a>
+                    <a href="index.html#galeria">Fotos</a>
+                    <a href="conteudos.html">Conteúdos</a>
+                </div>
+                <div class="acoes-menu"><a class="botao botao-pequeno" href="login.html">Login professor</a></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="conteudos-hero">
+            <div class="container conteudos-hero-grade">
+                <div>
+                    <p class="rotulo">Área de estudos</p>
+                    <h1>Biblioteca de apoio para praticar LIBRAS.</h1>
+                    <p>Materiais complementares para revisar sinais, praticar em casa e acompanhar as atividades do curso com mais autonomia.</p>
+                    <div class="conteudos-hero-acoes">
+                        <a class="botao botao-claro" href="#biblioteca"><i class="icon-library-big" aria-hidden="true"></i> Explorar biblioteca</a>
+                        <a class="botao botao-secundario" href="login.html"><i class="icon-lock-keyhole" aria-hidden="true"></i> Área do professor</a>
+                    </div>
+                </div>
+                <aside class="conteudos-hero-card" aria-label="Resumo da biblioteca">
+                    <img src="../static/img/foto-sinais-libras.svg" alt="Representação de prática de sinais em LIBRAS">
+                    <div class="conteudos-hero-info">
+                        <span>Organização do curso</span>
+                        <strong>3 níveis</strong>
+                        <p>Conteúdos separados para revisão iniciante, intermediária e avançada.</p>
+                    </div>
+                    <div class="conteudos-hero-kpis">
+                        <span><b>4</b> formatos</span>
+                        <span><b>24h</b> para revisar</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="conteudos-area" id="biblioteca">
+            <div class="container">
+                <div class="conteudos-toolbar">
+                    <div>
+                        <span class="rotulo">Biblioteca</span>
+                        <h2>Escolha o nível e continue praticando.</h2>
+                        <p>Use os filtros para encontrar rapidamente o conteúdo certo para sua etapa do curso.</p>
+                    </div>
+                    <div class="conteudos-contador" aria-label="Quantidade de conteúdos encontrados">
+                        <strong id="conteudos-total">0</strong>
+                        <span>materiais encontrados</span>
+                    </div>
+                </div>
+
+                <nav class="filtros filtros-conteudos" aria-label="Filtrar conteúdos por nível">
+                    <a href="conteudos.html?nivel=todos" data-nivel="todos"><i class="icon-layout-grid" aria-hidden="true"></i><span>Todos</span></a>
+                    <a href="conteudos.html?nivel=iniciante" data-nivel="iniciante"><i class="icon-sparkles" aria-hidden="true"></i><span>Iniciante</span></a>
+                    <a href="conteudos.html?nivel=intermediario" data-nivel="intermediario"><i class="icon-route" aria-hidden="true"></i><span>Intermediário</span></a>
+                    <a href="conteudos.html?nivel=avancado" data-nivel="avancado"><i class="icon-trophy" aria-hidden="true"></i><span>Avançado</span></a>
+                </nav>
+
+                <div class="grade-conteudos" id="lista-conteudos">
+                    <div class="estado-vazio"><h2>Carregando conteúdos...</h2></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape rodape-conteudos">
+        <div class="container rodape-conteudos-grade">
+            <div>
+                <strong>Libras na Prática</strong>
+                <p>Conteúdos organizados para apoiar o estudo, a revisão e a participação dos alunos.</p>
+            </div>
+            <a class="lp-botao lp-botao-claro" href="index.html">Voltar para início</a>
+        </div>
+        <p class="rodape-final">© <span id="ano-atual"></span> Libras na Prática - SENAI-SP Campus Mariano Ferraz</p>
+    </footer>
+</body>
+</html>

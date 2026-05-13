@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Painel do professor | Libras na Prática</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.441.0/font/lucide.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/principal.js" defer></script>
+</head>
+<body class="pagina-painel">
+    <header class="topo">
+        <nav class="navegacao" aria-label="Navegação principal">
+            <a class="marca" href="index.html"><img src="../static/img/logo.png" alt=""><span>Libras na Prática</span></a>
+            <button class="botao-menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+            <div class="menu" id="menu-principal">
+                <div class="links-menu">
+                    <a href="index.html">Início</a>
+                    <a href="conteudos.html">Conteúdos</a>
+                    <a href="index.html#curso">Curso</a>
+                </div>
+                <div class="acoes-menu">
+                    <a class="botao botao-pequeno botao-secundario" href="/sair"><i class="icon-log-out" aria-hidden="true"></i> Sair</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cabecalho-pagina cabecalho-painel painel-hero">
+            <div class="container painel-hero-grade">
+                <div>
+                    <p class="rotulo">Painel do professor</p>
+                    <h1>Gerenciar conteúdos com clareza.</h1>
+                    <p>Cadastre vídeos, materiais, tarefas e textos de apoio para organizar a jornada dos alunos por nível.</p>
+                    <div class="painel-atalhos">
+                        <a class="botao botao-claro" href="#novo-conteudo"><i class="icon-plus" aria-hidden="true"></i> Novo conteúdo</a>
+                        <a class="botao botao-secundario" href="conteudos.html"><i class="icon-eye" aria-hidden="true"></i> Ver página pública</a>
+                    </div>
+                </div>
+                <aside class="painel-hero-card" aria-label="Resumo do painel">
+                    <div class="painel-avatar">
+                        <i class="icon-user-round-check" aria-hidden="true"></i>
+                    </div>
+                    <span>Professor logado</span>
+                    <strong id="painel-professor">Carregando...</strong>
+                    <p>Use este painel para manter o curso atualizado e facilitar a revisão fora da sala.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="faixa painel-area">
+            <div class="container painel-resumo" aria-label="Resumo dos conteúdos">
+                <article>
+                    <i class="icon-library-big" aria-hidden="true"></i>
+                    <span>Total cadastrado</span>
+                    <strong id="painel-total">0</strong>
+                </article>
+                <article>
+                    <i class="icon-circle-check-big" aria-hidden="true"></i>
+                    <span>Publicados</span>
+                    <strong id="painel-publicados">0</strong>
+                </article>
+                <article>
+                    <i class="icon-file-clock" aria-hidden="true"></i>
+                    <span>Rascunhos</span>
+                    <strong id="painel-rascunhos">0</strong>
+                </article>
+            </div>
+
+            <div class="container painel-grade">
+                <section class="bloco-painel painel-formulario" id="novo-conteudo">
+                    <div class="bloco-painel-topo">
+                        <div>
+                            <span class="rotulo">Cadastro</span>
+                            <h2>Novo conteúdo</h2>
+                        </div>
+                        <i class="icon-pencil-line" aria-hidden="true"></i>
+                    </div>
+                    <div id="mensagem-painel"></div>
+                    <form class="formulario" id="form-conteudo">
+                        <div class="campo-formulario">
+                            <label for="titulo">Título</label>
+                            <input id="titulo" name="titulo" type="text" maxlength="160" placeholder="Ex.: Saudações em LIBRAS" required>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="descricao">Descrição</label>
+                            <textarea id="descricao" name="descricao" rows="4" placeholder="Explique o que o aluno vai encontrar neste material." required></textarea>
+                        </div>
+
+                        <div class="campos-lado">
+                            <div class="campo-formulario">
+                                <label for="nivel">Nível</label>
+                                <select id="nivel" name="nivel" required>
+                                    <option value="iniciante">Iniciante</option>
+                                    <option value="intermediario">Intermediário</option>
+                                    <option value="avancado">Avançado</option>
+                                </select>
+                            </div>
+                            <div class="campo-formulario">
+                                <label for="tipo">Tipo</label>
+                                <select id="tipo" name="tipo" required>
+                                    <option value="video">Vídeo</option>
+                                    <option value="material">Material</option>
+                                    <option value="tarefa">Tarefa</option>
+                                    <option value="texto">Texto</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="url_recurso">Link do recurso</label>
+                            <input id="url_recurso" name="url_recurso" type="url" placeholder="https://">
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="texto_conteudo">Texto de apoio</label>
+                            <textarea id="texto_conteudo" name="texto_conteudo" rows="5" placeholder="Resumo, orientações, roteiro de prática ou atividade."></textarea>
+                        </div>
+
+                        <label class="campo-check">
+                            <input name="publicado" type="checkbox" checked>
+                            <span>Publicar agora</span>
+                        </label>
+
+                        <button class="botao" type="submit"><i class="icon-save" aria-hidden="true"></i> Salvar conteúdo</button>
+                    </form>
+                </section>
+
+                <section class="bloco-painel painel-listagem">
+                    <div class="bloco-painel-topo">
+                        <div>
+                            <span class="rotulo">Biblioteca</span>
+                            <h2>Conteúdos cadastrados</h2>
+                        </div>
+                        <i class="icon-folder-open" aria-hidden="true"></i>
+                    </div>
+                    <div class="lista-admin" id="lista-admin">
+                        <div class="estado-vazio estado-vazio-admin">
+                            <h3>Carregando conteúdos...</h3>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: libras-na-pratica
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT app:aplicacao
+    envVars:
+      - key: BANCO_HOST
+        sync: false
+      - key: BANCO_PORTA
+        sync: false
+      - key: BANCO_USUARIO
+        sync: false
+      - key: BANCO_SENHA
+        sync: false
+      - key: BANCO_NOME
+        value: defaultdb
+      - key: BANCO_SSL_MODE
+        value: REQUIRED
+      - key: BANCO_CRIAR_BANCO
+        value: false
+      - key: CHAVE_SECRETA
+        generateValue: true

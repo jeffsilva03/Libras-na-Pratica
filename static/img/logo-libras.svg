@@ -1,0 +1,8 @@
+﻿<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titulo-logo">
+  <title id="titulo-logo">Logo Libras na Prática</title>
+  <rect width="96" height="96" rx="18" fill="#2f211f"/>
+  <path d="M27 55C27 42 37 32 49 32C60 32 69 41 69 52C69 64 59 73 47 73H29V62H47C53 62 58 58 58 52C58 46 54 42 49 42C43 42 38 47 38 55V61H27V55Z" fill="#d1a66f"/>
+  <path d="M35 24C40 19 49 19 55 24L49 31C47 29 43 29 41 31L35 24Z" fill="#4f806f"/>
+  <path d="M61 26L70 17L78 25L69 34L61 26Z" fill="#a76554"/>
+</svg>
+
