@@ -18,7 +18,7 @@ def nome_banco_seguro(nome_banco):
 
 def obter_conexao(usar_banco=True):
     configuracao = obter_configuracao()
-    ssl_mode = configuracao["banco_ssl_mode"].strip().upper()
+    modo_ssl = configuracao["banco_ssl_mode"].strip().upper()
     dados_conexao = {
         "host": configuracao["banco_host"],
         "port": configuracao["banco_porta"],
@@ -28,14 +28,14 @@ def obter_conexao(usar_banco=True):
         "use_unicode": True,
     }
 
-    if ssl_mode in {"REQUIRED", "VERIFY_CA", "VERIFY_IDENTITY"}:
+    if modo_ssl in {"REQUIRED", "VERIFY_CA", "VERIFY_IDENTITY"}:
         dados_conexao["ssl_disabled"] = False
 
         if configuracao["banco_ssl_ca"]:
             dados_conexao["ssl_ca"] = configuracao["banco_ssl_ca"]
-            dados_conexao["ssl_verify_cert"] = ssl_mode in {"VERIFY_CA", "VERIFY_IDENTITY"}
-            dados_conexao["ssl_verify_identity"] = ssl_mode == "VERIFY_IDENTITY"
-    elif ssl_mode == "DISABLED":
+            dados_conexao["ssl_verify_cert"] = modo_ssl in {"VERIFY_CA", "VERIFY_IDENTITY"}
+            dados_conexao["ssl_verify_identity"] = modo_ssl == "VERIFY_IDENTITY"
+    elif modo_ssl == "DISABLED":
         dados_conexao["ssl_disabled"] = True
 
     if usar_banco:

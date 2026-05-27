@@ -17,7 +17,7 @@ from configuracao import obter_configuracao
 
 
 PASTA_BASE = Path(__file__).resolve().parent
-PASTA_FRONTEND = PASTA_BASE / "frontend"
+PASTA_PAGINAS = PASTA_BASE / "frontend"
 
 aplicacao = Flask(__name__, static_folder="static")
 configuracao = obter_configuracao()
@@ -44,7 +44,7 @@ def banco_disponivel():
 
 
 def enviar_pagina(nome_arquivo):
-    return send_from_directory(PASTA_FRONTEND, nome_arquivo)
+    return send_from_directory(PASTA_PAGINAS, nome_arquivo)
 
 
 def resposta_erro(mensagem, codigo=400):
@@ -224,7 +224,7 @@ def api_criar_conteudo():
 
 @aplicacao.post("/api/admin/conteudos/<int:id_conteudo>/publicacao")
 @professor_logado_api
-def api_mudar_publicacao(id_conteudo):
+def api_alternar_publicacao(id_conteudo):
     if not banco_disponivel():
         return resposta_erro("Não foi possível conectar ao banco de dados.", 503)
 

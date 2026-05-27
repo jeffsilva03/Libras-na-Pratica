@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
 :root {
     --azul:       #563a37;
@@ -55,7 +55,6 @@ h1, h2, h3, p, a, button, label, span, strong { overflow-wrap: break-word; }
 }
 .link-pular:focus { top: 16px; }
 
-/* ── NAV ── */
 .topo {
     position: sticky; top: 0; z-index: 100;
     background: rgba(255,255,255,0.88);
@@ -131,7 +130,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
     background: var(--azul); border-radius: 2px; transition: transform 200ms;
 }
 
-/* ── BOTÕES ── */
 .botao {
     min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
     padding: 10px 22px; border: 0; border-radius: var(--raio);
@@ -153,7 +151,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 .botao-perigo { background: #963f34; }
 .botao-perigo:hover { box-shadow: 0 12px 28px rgba(150,63,52,0.30); }
 
-/* ── AVISOS ── */
 .aviso {
     display: flex; align-items: center; gap: 12px;
     padding: 14px 18px; border-radius: var(--raio);
@@ -166,7 +163,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 .aviso-aviso { border-left-color: var(--amarelo); }
 .aviso-sucesso { border-left-color: var(--verde); }
 
-/* ── RÓTULOS / SELOS ── */
 .rotulo {
     display: inline-block; margin: 0 0 12px;
     padding: 5px 12px; border-radius: 999px;
@@ -175,7 +171,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 }
 .cabecalho-pagina .rotulo { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.9); }
 
-/* ── CABEÇALHO PÁGINA ── */
 .cabecalho-pagina {
     padding: 80px 0 72px;
     background: linear-gradient(135deg, var(--azul) 0%, #8a5a55 100%);
@@ -192,7 +187,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 }
 .cabecalho-painel { background: linear-gradient(135deg, #2f211f 0%, var(--azul) 100%); }
 
-/* ── PÁGINA CONTEÚDOS ── */
 .pagina-conteudos { background: #f7f2ef; }
 .conteudos-hero {
     padding: 88px 0 118px;
@@ -308,12 +302,10 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
     color: rgba(255,255,255,0.72); font-weight: 800; font-size: 0.78rem;
 }
 
-/* ── FAIXAS ── */
 .faixa { padding: 80px 0; }
 .faixa-clara { background: var(--superficie); }
 .faixa-verde { background: var(--verde-suave); }
 
-/* ── FILTROS ── */
 .filtros { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
 .filtros a {
     min-height: 40px; display: inline-flex; align-items: center;
@@ -355,7 +347,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
     background: rgba(255,255,255,0.14); color: var(--amarelo);
 }
 
-/* ── GRADE CONTEÚDOS ── */
 .grade-conteudos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
@@ -437,7 +428,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
     color: var(--azul);
 }
 
-/* ── ESTADO VAZIO ── */
 .estado-vazio {
     grid-column: 1 / -1; text-align: center;
     padding: 64px 24px;
@@ -454,7 +444,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 }
 .estado-vazio p { color: var(--texto-suave); margin: 0; }
 
-/* ── FORMULÁRIO ── */
 .pagina-formulario {
     min-height: calc(100vh - 72px);
     display: flex; align-items: center; justify-content: center;
@@ -509,7 +498,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 }
 .campo-check input { width: auto; }
 
-/* ── PAINEL ── */
 .pagina-painel { background: #f7f2ef; }
 .painel-hero {
     padding: 88px 0 128px;
@@ -614,7 +602,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 }
 .campo-formulario { display: grid; gap: 6px; }
 
-/* ── LISTA ADMIN ── */
 .lista-admin { display: flex; flex-direction: column; gap: 14px; }
 
 .item-admin {
@@ -674,7 +661,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 }
 .estado-vazio-admin p { color: var(--texto-suave); font-size: 0.9rem; margin: 0; }
 
-/* ── RODAPÉ ── */
 .rodape {
     padding: 0;
     background:
@@ -763,7 +749,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
     color: rgba(255,255,255,0.72);
 }
 
-/* ── LANDING PAGE ── */
 .lp-hero {
     min-height: calc(100vh - 88px);
     display: flex; align-items: center;
@@ -833,7 +818,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 }
 .lp-resumo strong { color: var(--amarelo); }
 
-/* ── HERO VISUAL ── */
 .lp-hero-visual {
     position: relative; min-height: 520px;
     display: flex; align-items: center; justify-content: center;
@@ -876,7 +860,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 .lp-card-flutuante-um  { left: -24px; top: 80px; }
 .lp-card-flutuante-dois { right: -8px; bottom: 40px; }
 
-/* ── SELOS ── */
 .lp-selo {
     display: inline-flex; align-items: center; gap: 6px;
     padding: 6px 14px; border-radius: 999px;
@@ -887,7 +870,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 }
 .lp-selo svg { flex-shrink: 0; }
 
-/* ── SEÇÕES LP ── */
 .lp-secao { padding: 100px 0; }
 .lp-secao-clara { background: var(--superficie); }
 .lp-secao-dados {
@@ -911,7 +893,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 }
 .lp-cabecalho p { margin: 18px auto 0; max-width: 620px; color: var(--texto-suave); font-size: 1.06rem; }
 
-/* GRADE LP (genérica) */
 .lp-curso-grade, .lp-dados-grade, .lp-professora-grade,
 .lp-metodo-grade, .lp-galeria-grade, .lp-chamada-grade {
     display: grid; gap: 48px; align-items: center;
@@ -923,7 +904,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 .lp-galeria-grade { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); }
 .lp-chamada-grade { grid-template-columns: minmax(0, 1fr) auto; }
 
-/* BLOCOS CURSO */
 .lp-bloco-curso {
     min-height: 270px; padding: 28px; border-radius: var(--raio-xl);
     background: #fff; border: 1px solid var(--borda);
@@ -949,7 +929,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 .lp-bloco-destaque h3, .lp-bloco-destaque p { color: #fff; }
 .lp-bloco-destaque p { color: rgba(255,255,255,0.78); }
 
-/* DADOS */
 .lp-dados-grade { position: relative; z-index: 1; }
 .lp-dados-grade h2 { text-align: left; }
 .lp-dados-grade p { color: var(--texto-suave); margin: 16px 0 0; max-width: 520px; }
@@ -1037,7 +1016,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 .lp-dados-barras .barra-estudo { width: 78%; }
 .lp-dados-barras .barra-professor { width: 68%; }
 
-/* PROFESSORA */
 .lp-professora {
     background:
         linear-gradient(180deg, #fff 0%, #fbf7f4 100%);
@@ -1096,7 +1074,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
     width: 14px; height: 14px; border-radius: 50%; background: var(--verde);
 }
 
-/* NÍVEIS */
 .lp-niveis { background: #fff; }
 .lp-niveis-grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 
@@ -1141,7 +1118,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 }
 .lp-nivel-destaque li::before { background: var(--amarelo); }
 
-/* MÉTODO */
 .lp-metodo {
     background:
         linear-gradient(135deg, var(--azul-suave) 0%, #fff 54%, var(--verde-suave) 100%);
@@ -1199,7 +1175,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 .lp-passos strong { display: block; color: var(--azul); font-family: var(--fonte-display); font-weight: 800; }
 .lp-passos span { display: block; color: var(--texto-suave); font-size: 0.9rem; }
 
-/* GALERIA */
 .lp-galeria { background: #fbf7f4; }
 .lp-mosaico {
     display: grid; grid-template-columns: 1fr 0.85fr;
@@ -1240,7 +1215,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
     font-family: var(--fonte-display); font-weight: 800; font-size: 0.9rem;
 }
 
-/* CHAMADA */
 .lp-chamada {
     padding: 88px 0;
     background: linear-gradient(135deg, var(--azul) 0%, #8a5a55 100%);
@@ -1251,7 +1225,6 @@ i[class^="icon-"], i[class*=" icon-"] { line-height: 1; }
 .lp-chamada .lp-selo { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.2); }
 .lp-chamada .lp-acoes { margin-top: 0; }
 
-/* ── RESPONSIVO ── */
 @media (max-width: 1050px) {
     .lp-hero-grade, .lp-dados-grade, .lp-professora-grade,
     .lp-metodo-grade, .lp-galeria-grade, .lp-chamada-grade {
